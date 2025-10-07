@@ -1,10 +1,24 @@
 body {
-	background: rgb(50, 148, 214);
+	background: rgb(206, 228, 243);
 	font-family: 'Times New Roman', Times, serif;
     margin: 40px;
-    color:rgb(33, 33, 33);
 }
 h1 {
 	color: rgb(33, 33, 33);
 	text-align: center;
+}
+.about{
+    color: rgb(202, 101, 18);
+    p {
+        color: rgb(0, 0, 0);
+    }
+}
+.skills{
+    color: rgb(0, 0, 0);
+}
+.projects{
+    color: rgb(22, 183, 49);
+}
+.contact{
+    color: rgb(178, 178, 178);
 }
