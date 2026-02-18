@@ -1,0 +1,28 @@
+body {
+	background: #c3f7ff;
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+	color: #545454;
+	text-align: center;
+}
+h2 {
+    color: #545454;
+    text-align: center;
+}
+.about {
+    text-align: center;
+    background: #98c1c774;
+}
+.skills {
+    text-align: center;
+    background: #98c1c774;
+}
+.projects {
+    text-align: center;
+    background: #98c1c774;
+}
+.contact {
+    text-align: center;
+    background: #98c1c774;
+}
