@@ -1,14 +1,155 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>CSCE 190: Wyatt Bowen</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyatt Bowen's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <h1>Wyatt Bowen</h1>
-    <div class="about"><h2>About me</h2><p>[mission statement]</p></div>
-    <div class="skills"><h2>Skills</h2></div>
-    <div class="projects"><h2>Highlighted projects</h2></div>
-    <div class="contact"><h2>Contact me</h2></div>
-  </body>
+</head>
+<body>
+
+<div class="site-wrapper">
+    <aside class="sidebar">
+        <h1>Wyatt Bowen</h1>
+        <p class="tagline">Computer Engineering Undergraduate</p>
+        <nav>
+            <button class="nav-btn active" onclick="showSection('about')">About Me</button>
+            <button class="nav-btn" onclick="showSection('skills')">My Skills</button>
+            <button class="nav-btn" onclick="showSection('projects')">Projects</button>
+            <button class="nav-btn" onclick="showSection('contact')">Contact</button>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        
+        <section id="about" class="content-block active">
+          <h2>About Me</h2>
+          <div class="bio-container">
+            <img src="Images/coverPhoto.jpeg" alt="My Photo" class="profile-pic">
+        
+            <div class="mission-statement">
+              <p>
+                <strong>Hey! I’m Wyatt Bowen,</strong> a Computer Engineering student at the University of South Carolina. 
+                I am passionate about exploring the intersection of hardware design and software development to build 
+                efficient, real-world solutions. My goal is to leverage my technical skills to innovate in the field 
+                of embedded systems and high-performance computing.
+              </p>
+            </div>
+
+            <p>
+              When I'm not in the lab, I enjoy coding new projects, solving complex problems, and traveling to new places. 
+              I'm also a huge sports fan. While I love to support my Gamecocks, my true loyalty lies with The Ohio State Buckeyes!
+            </p>
+        
+            <a href="Files/Resume.pdf" target="_blank" class="resume-link">View My Resume →</a>
+          </div>
+        </section>
+
+        <section id="skills" class="content-block">
+          <h2>Technical Expertise</h2>
+          
+          <div class="skills-grid">
+              <div class="skill-category">
+                  <h3>Programming</h3>
+                  <p>Python, JavaScript</p>
+              </div>
+
+              <div class="skill-category">
+                  <h3>Systems</h3>
+                  <p>Linux/Unix, Raspberry Pi</p>
+              </div>
+
+              <div class="skill-category">
+                  <h3>Hardware</h3>
+                  <p>Sensor Integration, Embedded Systems</p>
+              </div>
+
+              <div class="skill-category">
+                  <h3>Concepts</h3>
+                  <p>Object-Oriented Programming, Algorithm Design, Mathematical Modeling</p>
+              </div>
+          </div>
+        </section>
+
+        <section id="projects" class="content-block">
+          <h2>CSCE 190 Assignments</h2>
+          
+          <div class="gallery-grid">
+              
+              <div class="project-item">
+                  <a href="files/Problem Statement.pdf" target="_blank" class="project-link">
+                      <h3>Problem Statement</h3>
+                  </a>
+                  <a href="files/Problem Statement.pdf" target="_blank" class="project-img-link">
+                      <img src="Images/Problem Statement.png" alt="Problem Statement" class="project-img">
+                  </a>
+                  <p>Finding a compatible college roommate is challenging because students often rely on limited or potentially misleading online interactions that don’t accurately reflect real-life personalities.</p>
+              </div>
+
+              <div class="project-item">
+                  <a href="Files/affinityBoard.pdf" target="_blank" class="project-link">
+                      <h3>Affinity Diagram</h3>
+                  </a>
+                  <a href="Files/affinityBoard.pdf" target="_blank">
+                      <img src="Images/affinityBoard.png" alt="Affinity Diagram" class="project-img">
+                  </a>
+                  <p>A collaborative brainstorming map used to organize project ideas and identify potential technical hurdles.</p>
+              </div>
+
+              <div class="project-item">
+                  <a href="Files/personas.pdf" target="_blank" class="project-link">
+                      <h3>Personas & Storyboards</h3>
+                  </a>
+                  <a href="Files/personas.pdf" target="_blank">
+                      <img src="Images/persona.png" alt="Paper Prototype" class="project-img">
+                  </a>
+                  <p>A combined user research project featuring four distinct freshman college personas and corresponding storyboards that illustrate how each would interact with the app across different needs, goals, and lifestyles.</p>
+              </div>
+
+              <div class="project-item">
+                  <a href="Files/sketches.pdf" target="_blank" class="project-link">
+                      <h3>Sketches / Prototypes</h3>
+                  </a>
+                  <a href="Files/sketches.pdf" target="_blank">
+                      <img src="Images/Sketches.png" alt="Paper Prototype" class="project-img">
+                  </a>
+                  <p>A low-fidelity physical mock-up used to test user interface flow and logical navigation before coding.</p>
+              </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="content-block">
+            <h2>Get In Touch</h2>
+            <p>I would love to hear from you!</p>
+            <div class="links">
+                <p>Email: <a href="mailto:whbow14@gmail.com">whbow14@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/wyattbowen">github.com/wyattbowen</a></p>
+                <p>Phone: +1 (803) 738-6867</p>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script>
+    // Simplified function to switch sections
+    function showSection(sectionId) {
+        // 1. Hide all sections
+        const sections = document.querySelectorAll('.content-block');
+        sections.forEach(s => s.classList.remove('active'));
+
+        // 2. Remove "active" color from all buttons
+        const buttons = document.querySelectorAll('.nav-btn');
+        buttons.forEach(b => b.classList.remove('active'));
+
+        // 3. Show the one section the user clicked
+        document.getElementById(sectionId).classList.add('active');
+
+        // 4. Highlight the button that was clicked
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
 </html>
